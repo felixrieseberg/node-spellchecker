@@ -6,3 +6,4 @@ spec/
 npm-debug.log
 appveyor.yml
 .travis.yml
+.vscode
