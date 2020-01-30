@@ -23,6 +23,6 @@
     "jasmine-focused": "1.x"
   },
   "dependencies": {
-    "nan": "^2.14.0"
+    "node-addon-api": "*"
   }
 }
