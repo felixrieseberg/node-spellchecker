@@ -219,10 +219,10 @@ class Spellchecker : public Nan::ObjectWrap {
   }
 };
 
-void Init(Local<Object> exports, Local<Object> module) {
-  Spellchecker::Init(exports);
+NAN_MODULE_INIT(Init) {
+  Spellchecker::Init(target);
 }
 
 }  // namespace
 
-NODE_MODULE(spellchecker, Init)
+NAN_MODULE_WORKER_ENABLED(spellchecker, Init)
