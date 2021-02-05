@@ -4,6 +4,9 @@
       ['OS=="mac"', {
         'spellchecker_use_hunspell%': 'true',
       }],
+      ['OS=="openbsd"', {
+        'spellchecker_use_hunspell': 'false',
+      }],
       ['OS=="linux"', {
         'spellchecker_use_hunspell': 'true',
       }],
@@ -55,6 +58,12 @@
              'src/transcoder_posix.cc',
           ],
           'defines': [ 'WCHAR_T_IS_UTF32' ],
+        }],
+	['OS=="openbsd"', {
+          'sources': [
+             'src/spellchecker_linux.cc',
+             'src/transcoder_posix.cc',
+          ]
         }],
         ['OS=="mac"', {
           'sources': [
